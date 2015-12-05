@@ -18,7 +18,7 @@ def play_hand(cpu, player):
 
 	return result
 
-def play_gam():
+def play_game():
 	
 	while True:
 		player_string = str(input("Enter rock, paper or scissors, or quit to leave the game"))
