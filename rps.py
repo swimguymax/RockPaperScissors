@@ -21,7 +21,7 @@ def play_hand(cpu, player):
 def play_game():
 	
 	while True:
-		player_string = str(input("Enter rock, paper or scissors, or quit to leave the game"))
+		player_string = str(input("Enter rock, paper or scissors, or quit to leave the game")).lower()
 
 		cpu_number = randint(1, 3)
 
@@ -36,7 +36,12 @@ def play_game():
 
 		elif player_string == "scissors":
 			player_number = 3
-			play_hand(cpu_number, player_number)
+		
+		else:
+			print("Please choose a valid option")
+			continue
+
+		play_hand(cpu_number, player_number)
 
 		if result == "player":
 			print("Well done, you have won the round.")
